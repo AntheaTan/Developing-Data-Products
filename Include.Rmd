@@ -16,4 +16,8 @@ This dataset is included in R datasets and can be obtained by executing R comman
 
 from R console.
 
-By using this application you can perform a basic data exploratory analysis by building three types of plots: Standard Plot, Box Plot and Pair Plot. By using these plots a various answers regarding datadepencies could be answered.
+You can perform basic data exploratory analysis by building three types of plots: Standard Plot, Box Plot and Pair Plot. 
+
+Different data variables of this dataset are used: one as predictor, what we have to choose, and the other is 'mpg' as the outcome, or selecting among different data variables and observing the dependencies.
+
+It is simple to use and when the different predictor is selected the plot is updated putting the new fit.

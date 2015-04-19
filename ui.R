@@ -18,7 +18,8 @@ shinyUI(fluidPage(
                       sidebarPanel(
                         
                         h3('Box Plot settings'),
-                        selectInput('xAxis', 'xAxis', selected = "cyl" , c('cyl', 'vs', 'am', 'gear', 'carb')),
+                        p('Select the predictor variable with mpg as outcome:'),
+                        selectInput('xAxis', 'X-Axis', selected = "cyl" , c('cyl', 'vs', 'am', 'gear', 'carb')),
                         tags$br(),
                         tags$br(),
                         strong('VARIABLE DESCRIPTIONS:'),
@@ -42,9 +43,10 @@ shinyUI(fluidPage(
                       sidebarPanel(
                         
                         h3('GG Plot settings'),
-                
-                        selectInput('x', 'X', names(dataset), selected = "hp"),
-                        selectInput('y', 'Y', names(dataset), selected = "mpg"),
+                        p('Select the predictor variable'),
+                        
+                        selectInput('x', 'X-Axis', names(dataset), selected = "hp"),
+                        selectInput('y', 'Y-Axis', names(dataset), selected = "mpg"),
                         selectInput('color', 'Color', selected = "cyl" , c('None', names(dataset))),
                         selectInput('size', 'Size', selected = "None" , c('None', names(dataset))),
                         
@@ -78,6 +80,7 @@ shinyUI(fluidPage(
                       sidebarPanel(
                         
                         h3('Pair plot settings'),
+                        p('Select any combinations of checkboxes'),
                         
                         checkboxInput('P_mpg', 'mpg - Miles/(US) gallon', value = T),
                         checkboxInput('P_cyl', 'cyl - Number of cylinders', value = T),
