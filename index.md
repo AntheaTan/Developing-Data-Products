@@ -68,4 +68,4 @@ https://antheatan.shinyapps.io/Developing-Data-Products/
 
 Presentation link
 
-http://antheatan.github.io/Developing-Data-Products/index.html
+http://antheatan.github.io/Developing-Data-Products
