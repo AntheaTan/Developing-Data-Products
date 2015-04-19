@@ -13,13 +13,7 @@ dataset$carb<-as.factor(dataset$carb)
 
 shinyUI(fluidPage(
   navbarPage("Motor Trend Car Road Tests",
-             
-             tabPanel("About",
-                      mainPanel(
-                        includeMarkdown("Include.Rmd")
-                      )
-             ),
-                         
+                       
              tabPanel("Box Plot",
                       sidebarPanel(
                         
@@ -103,8 +97,14 @@ shinyUI(fluidPage(
                         h2('Basic Introductory Exploratory Analysis'),
                         plotOutput('pairPlot')     
                       )
+             ),
+             
+             tabPanel("About",
+                      mainPanel(
+                        includeMarkdown("Include.Rmd")
+                      )
              )
              
-
+             
   ) 
 ))
