@@ -13,6 +13,13 @@ dataset$carb<-as.factor(dataset$carb)
 
 shinyUI(fluidPage(
   navbarPage("Motor Trend Car Road Tests",
+             
+             tabPanel("About",
+                      mainPanel(
+                        includeMarkdown("Include.Rmd")
+                      )
+             ),
+                         
              tabPanel("Box Plot",
                       sidebarPanel(
                         
@@ -49,8 +56,6 @@ shinyUI(fluidPage(
                         
                         checkboxInput('smooth', 'Smooth'),
                         
-                        selectInput('facet_row', 'Facet Row', selected = "Survived", c(None='.', names(dataset))),
-                        selectInput('facet_col', 'Facet Column', c(None='.', names(dataset))),
                         tags$br(),
                         tags$br(),
                         strong('VARIABLE DESCRIPTIONS:'),
@@ -83,7 +88,7 @@ shinyUI(fluidPage(
                         checkboxInput('P_mpg', 'mpg - Miles/(US) gallon', value = T),
                         checkboxInput('P_cyl', 'cyl - Number of cylinders', value = T),
                         checkboxInput('P_disp', 'disp - Displacement (cu.in.)'),
-                        checkboxInput('P_hp', 'hp - Gross horsepower', value = T),
+                        checkboxInput('P_hp', 'hp - Gross horsepower'),
                         checkboxInput('P_drat', 'drat - Rear axle ratio'),
                         checkboxInput('P_wt', 'wt - Weight (lb/1000)'),
                         checkboxInput('P_qsec', 'qsec - 1/4 mile time'),
@@ -98,13 +103,8 @@ shinyUI(fluidPage(
                         h2('Basic Introductory Exploratory Analysis'),
                         plotOutput('pairPlot')     
                       )
-             ),
-             
-             tabPanel("About",
-                      mainPanel(
-                        includeMarkdown("Include.Rmd")
-                      )
              )
              
+
   ) 
 ))
